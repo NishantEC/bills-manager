@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import DashBoard from './components/DashBoard'
+import Navbar from './components/Navbar'
+import { Routes, Route } from 'react-router-dom'
+import CreateBill from './components/CreateBill'
+import BillsContainer from './components/BillsContainer'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<BillsContainer />} />
+        <Route path="createBill" element={<CreateBill />} />
+        <Route path="chart" element={<DashBoard/>} />
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

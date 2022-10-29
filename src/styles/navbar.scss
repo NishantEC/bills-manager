@@ -1,0 +1,35 @@
+nav {
+  width: 100%;
+  display: flex;
+  text-transform: uppercase;
+  background-color: #645cff;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 600px) {
+    flex-direction: column;
+
+  }
+  .menu-items{
+    display: flex;
+    justify-content: center;
+  }
+  .Nav-logo,
+  .menu-item {
+    padding: 20px 10px;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 2px;
+    &:hover {
+      color: #979797;
+    }
+  }
+  .Nav-logo {
+    font-weight: bold;
+    font-size: large;
+  }
+
+  .menu-item {
+    font-size: 13px;
+
+  }
+}

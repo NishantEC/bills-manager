@@ -1,0 +1,104 @@
+
+.craeteupdatebill{
+
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+        div{
+            width: 80%;
+            max-width: 500px;
+            position: relative;
+
+            input, select{
+                font-weight: 600;
+                height: 50px;
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                padding: 10px;
+
+                &:focus{
+                    outline: none;
+                    border:1px solid #000;
+                }
+
+            }
+
+            select{
+              -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-color: #fafafa;
+    width: 100%;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
+    background-position: 100%;
+    background-repeat: no-repeat;
+            }
+
+            p{
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-size: 13px;
+                font-weight: 700;
+                position: absolute;
+                left: 10px;
+                top:-12px;
+                background-color: white;
+                border-radius: 5px;
+                padding: 2px 8px ;
+            }
+            }
+            .btn{
+                display: grid;
+                font-size: 15px;
+                place-content: center;
+                letter-spacing: 2px;
+                font-weight: 800;
+                text-transform: uppercase;
+                cursor: pointer;
+                background-color: #585858;
+
+
+        color: white;
+        height: 40px ;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 20px;
+
+
+        &:hover{
+            scale: 0.95;
+            background-color:#fff;
+            color: #000;}
+    }
+
+  
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+  
+  .modal {
+    width: 70%;
+    min-width: 300px;
+    max-width: 450px;
+    padding: 30px 30px;
+    border-radius: 10px;
+    gap: 40px;
+    background-color: #fff;
+    text-align: center;
+  }
+

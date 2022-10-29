@@ -1,0 +1,123 @@
+.billcard {
+  display: flex;
+  padding: 20px 0px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  align-items: center;
+
+  @media (max-width: 700px) {
+
+
+    gap: 20px;
+    flex-direction: column;
+  }
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 80%;
+    padding: 0px 40px;
+    @media (max-width: 600px) {
+      
+      padding: 0px 0px;
+    }
+
+
+    span {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      @media (max-width: 600px) {
+
+        gap: 20px;
+        flex-direction: column;
+      }
+      h3{
+        font-size: 30px;
+        @media (max-width: 600px) {
+          font-size: 20px;
+        }
+      }
+      div {
+        display: flex;
+
+        align-items: center;
+        input{
+  
+            padding: 0;
+            width: 130px;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+          
+          
+            font-weight: 700;
+
+            color: black;
+          
+          }
+          input[type="date"]::-webkit-inner-spin-button,
+          input[type="date"]::-webkit-calendar-picker-indicator {
+          display: none;
+
+          }
+      }
+    }
+  }
+}
+
+.btns {
+  //   width: unset !important;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+
+  gap: 20px;
+  @media (max-width: 700px) {
+    flex-direction: row;
+  }
+  .btn {
+    display: grid;
+    font-size: 15px;
+    place-content: center;
+    letter-spacing: 2px;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: #585858;
+
+    color: white;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+
+    &:hover {
+      scale: 0.95;
+      background-color: rgb(228, 228, 228);
+      color: #000;
+    }
+  }
+}
+
+.grey{
+    color: #585858;
+    font-size: 17px;
+    font-weight: 600;
+    @media (max-width: 600px) {
+      font-size: 13px;
+    }
+
+}
+
+.black{
+    color: black;
+}
+.bold{
+    font-size: 20px;
+    padding-left: 5px;
+    font-weight: bold;
+    @media (max-width: 600px) {
+      font-size: 15px;
+    }
+}
