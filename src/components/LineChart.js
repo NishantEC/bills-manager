@@ -35,7 +35,7 @@ const LineChart = () => {
 
   useEffect(() => {
     billsData.map((bill) => handleBillData(bill))
-  },[billsData])
+  },[])
 
   const chartData = {
     labels: months,
