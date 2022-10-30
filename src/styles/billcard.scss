@@ -4,6 +4,7 @@
   border-radius: 5px;
   border: 1px solid #ccc;
   align-items: center;
+  max-width: 700px;
 
   @media (max-width: 700px) {
 
@@ -32,12 +33,7 @@
         gap: 20px;
         flex-direction: column;
       }
-      h3{
-        font-size: 25px;
-        @media (max-width: 600px) {
-          font-size: 20px;
-        }
-      }
+
       div {
         display: flex;
 
@@ -45,13 +41,16 @@
         input{
   
             padding: 0;
-            width: 130px;
+            width: 90px;
+            height: 20px;
+
             text-align: center;
             background-color: transparent;
             border: none;
+
           
           
-            font-weight: 700;
+            font-weight: 800;
 
             color: black;
           
@@ -71,10 +70,14 @@
   display: flex;
   flex-direction: column;
   place-content: center;
+  padding-right: 20px;
 
   gap: 20px;
   @media (max-width: 700px) {
     flex-direction: row;
+  }
+  @media (max-width: 320px) {
+    flex-direction: column;
   }
   .btn {
     display: grid;
@@ -84,16 +87,16 @@
     font-weight: 800;
     text-transform: uppercase;
     cursor: pointer;
-    background-color: #585858;
+    // background-color: #585858;
 
-    color: white;
+    color: #585858;
     height: 40px;
-    border: 1px solid black;
+    border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
 
     &:hover {
-      scale: 0.95;
+
       background-color: rgb(228, 228, 228);
       color: #000;
     }
@@ -102,11 +105,9 @@
 
 .grey{
     color: #585858;
-    font-size: 17px;
+
     font-weight: 600;
-    @media (max-width: 600px) {
-      font-size: 13px;
-    }
+
 
 }
 
@@ -114,10 +115,8 @@
     color: black;
 }
 .bold{
-    font-size: 20px;
+
     padding-left: 5px;
     font-weight: bold;
-    @media (max-width: 600px) {
-      font-size: 15px;
-    }
+
 }

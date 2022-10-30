@@ -87,6 +87,7 @@ const UpdateBill = () => {
           </select>
         </div>
 
+        <div className="btns">
         <div
           className="btn"
           onClick={() => {
@@ -103,6 +104,7 @@ const UpdateBill = () => {
           }}
         >
           Cancel
+        </div>
         </div>
       </div>
     </aside>

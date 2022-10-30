@@ -9,10 +9,19 @@
 .bills-wrapper {
   width: 90vw;
   gap: 20px;
-
-  display: flex;
-  flex-direction: column;
   place-content: center;
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  
+  @media (max-width: 900px) {
+    
+    grid-template-columns: repeat(1,1fr);
+
+    
+  }
+
+
 
   gap: 20px;
 }
