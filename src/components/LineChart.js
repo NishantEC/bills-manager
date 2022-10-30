@@ -23,16 +23,18 @@ const LineChart = () => {
   })
   const months = Object.keys(Dataset)
 
-  useEffect(() => {
-    billsData.map((bill) => {
-      const date = new Date(bill.date)
-      const month = months[date.getMonth()]
-      const newAmount = Dataset[month] + parseFloat(bill.amount)
-      const prevDataset = Dataset
-      prevDataset[month] = newAmount
+  const handleBillData=(bill)=>{
+    const date = new Date(bill.date)
+    const month = months[date.getMonth()]
+    const newAmount = Dataset[month] + parseFloat(bill.amount)
+    const prevDataset = Dataset
+    prevDataset[month] = newAmount
 
-      setDataset(prevDataset)
-    })
+    setDataset(prevDataset)
+  }
+
+  useEffect(() => {
+    billsData.map((bill) => handleBillData(bill))
   })
 
   const chartData = {
