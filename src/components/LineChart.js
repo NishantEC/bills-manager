@@ -23,6 +23,7 @@ const LineChart = () => {
   })
   const months = Object.keys(Dataset)
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleBillData=(bill)=>{
     const date = new Date(bill.date)
     const month = months[date.getMonth()]
@@ -35,7 +36,7 @@ const LineChart = () => {
 
   useEffect(() => {
     billsData.map((bill) => handleBillData(bill))
-  },[])
+  },[billsData, handleBillData])
 
   const chartData = {
     labels: months,
