@@ -1,88 +1,45 @@
-
-.bills-container{
-width: 100vw;
-display: grid;
-place-content: center;
-gap: 20px;
-padding: 30px;
-
+.bills-container {
+  width: 100vw;
+  display: grid;
+  place-content: center;
+  gap: 20px;
+  padding: 30px;
 }
 
 .bills-wrapper {
   width: 90vw;
- gap: 20px;
+  gap: 20px;
 
-  display : flex;
+  display: flex;
   flex-direction: column;
   place-content: center;
 
   gap: 20px;
-
 }
 
-// .billcard {
-//   padding: 20px;
-//   border-radius: 5px;
-//   border: 1px solid #ccc;
+.filter-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-//   width: 100%;
-//   background-color: white;
-//   display: flex;
-//   justify-content: space-between;
-//   gap: 20px;
-//   font-weight: 500;
-//   div{
-//     width: 100%;
-//     div {
-      
-//       display: flex;
-  
-//       color: grey;
-//       h3 {
-        
-//         color: #000;
-//       }
-//       div {
+  gap: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  select {
+    font-weight: 600;
+    height: 40px;
 
-  
+    border-radius: 5px;
+    border: 1px solid #ccc;
 
-//         span{
-//         padding-left: 5px;
-//         color: black;
-//       }}
-      
-//     }
-//   }
-// }
-
-
-// .btns{
-//   width: unset !important;
-//   display: flex;
-//   justify-content: center;
-//   flex-direction: column;
-//     gap: 20px;
-//     .btn{
-//         display: grid;
-//         font-size: 15px;
-//         place-content: center;
-//         letter-spacing: 2px;
-//         font-weight: 800;
-//         text-transform: uppercase;
-//         cursor: pointer;
-//         background-color: #585858;
-
-//         color: white;
-//         height: 40px ;
-//         border: 1px solid black;
-//         border-radius: 5px;
-//         padding: 20px;
-
-
-//         &:hover{
-//             scale: 0.95;
-//             background-color:rgb(228, 228, 228);
-//             color: #000;}
-//     }
-// }
-
+    padding: 0px 15px;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-color: #fafafa;
+    width: 150px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
+    background-position: 100%;
+    background-repeat: no-repeat;
+  }
+}

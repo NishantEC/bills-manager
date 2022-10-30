@@ -7,9 +7,9 @@ const Navbar = () => {
         <span>Bills Manager</span>
       </Link>
       <div className="menu-items">
-      <Link to="/" className='menu-item'>View Bills</Link>
+      <Link to="/" className='menu-item'>All Bills</Link>
       <Link to="/createBill" className='menu-item'>createBill</Link>
-      <Link to="/chart" className='menu-item'>overview</Link>
+      <Link to="/chart" className='menu-item'>Chart</Link>
       </div>
     </nav>
   )

@@ -54,7 +54,7 @@ const billSlice = createSlice({
   reducers: {
     createBill: (state, { payload }) => {
 
-      state.lastBillNo += 1
+      state.lastBillId += 1
       state.bills.push({id:state.lastBillId, ...payload})
     },
     deleteBill: (state, { payload }) => {

@@ -1,8 +1,10 @@
-import DashBoard from './components/DashBoard'
+
 import Navbar from './components/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import CreateBill from './components/CreateBill'
 import BillsContainer from './components/BillsContainer'
+import LineChart from './components/LineChart'
+
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<BillsContainer />} />
         <Route path="createBill" element={<CreateBill />} />
-        <Route path="chart" element={<DashBoard/>} />
+        <Route path="chart" element={<LineChart/>} />
       </Routes>
     </div>
   )

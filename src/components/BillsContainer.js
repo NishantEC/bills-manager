@@ -7,7 +7,7 @@ import UpdateBill from "./UpdateBill";
 const BillsContainer = () => {
   const bills = useSelector((store) => store.bills.bills);
   const [filteredCategory, setFilteredCategory] = useState("all");
-  const {isOpen,selectedId} = useSelector((state) => state.modal);
+  const {isOpen} = useSelector((state) => state.modal);
   const n = bills.length
 
 
@@ -42,7 +42,7 @@ const BillsContainer = () => {
                 return <BillCard {...bill} key={bill.id} />;
               })}
       </div>
-      {isOpen && <UpdateBill {...selectedId}/>}
+      {isOpen && <UpdateBill />}
     </div>
   );
 };

@@ -8,7 +8,7 @@ const CreateBill = () => {
     const [NewBill, setNewBill] = useState({
         description: "",
         date: "",
-        amount: "",
+        amount: 0,
         category: "",
     })
 
@@ -17,7 +17,7 @@ const CreateBill = () => {
         setNewBill({ ...NewBill, [name]: value });
     }
     const saveHandler = () => {
-        if (NewBill.description !=="" & NewBill.amount!=="" & NewBill.date!=="" &NewBill.amount!=="") {
+        if (NewBill.description !=="" & NewBill.amount!=="" & NewBill.date!==0 &NewBill.amount!=="" &NewBill.category!=="") {
             dispatch(createBill(NewBill)); clearForm();
         }
 
@@ -28,7 +28,7 @@ const CreateBill = () => {
         setNewBill({
             description: "",
             date: "",
-            amount: "",
+            amount: 0,
             category: "",
         })
     }
@@ -38,7 +38,7 @@ const CreateBill = () => {
 
                 <div><input type="text" name='description' value={NewBill.description} onChange={(e) => onChangeHandler(e)} /><p>Description</p></div>
                 <div><input type="date" name='date' value={NewBill.date} onChange={(e) => onChangeHandler(e)} /><p>Date</p></div>
-                <div><input type="text" name="amount" value={NewBill.amount} onChange={(e) => onChangeHandler(e)} /><p>amount</p></div>
+                <div><input type="number" name="amount" value={NewBill.amount} onChange={(e) => onChangeHandler(e)} /><p>amount</p></div>
                 <div><p>category</p> <select name="category" value={NewBill.category} onChange={(e) => onChangeHandler(e)}>
                     <option value="" disabled>Select Category</option>
                     <option value="FoodNDining">FoodNDining</option>

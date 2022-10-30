@@ -4,9 +4,8 @@ import { useDispatch, useSelector, shallowEqual } from 'react-redux'
 import { updateBill } from '../reducers/billSlice'
 import { closeModal } from '../reducers/modalSlice'
 
-
 const UpdateBill = () => {
-  const id = useSelector((store) =>(store.modal.selectedId))
+  const id = useSelector((store) => store.modal.selectedId)
   const dispatch = useDispatch()
   const bill = useSelector(
     (store) =>
@@ -15,7 +14,7 @@ const UpdateBill = () => {
       }),
     shallowEqual,
   )
-console.log(bill)
+  console.log(bill)
   const [NewBill, setNewBill] = useState(bill)
 
   function onChangeHandler(e) {
@@ -28,7 +27,8 @@ console.log(bill)
       (NewBill.description !== '') &
       (NewBill.amount !== '') &
       (NewBill.date !== '') &
-      (NewBill.amount !== '')
+      (NewBill.amount !== '') &
+      (NewBill.category !== '')
     ) {
       dispatch(updateBill(NewBill))
       dispatch(closeModal())
@@ -36,11 +36,9 @@ console.log(bill)
   }
 
   return (
-    <aside className='modal-container'>
-
-
-    <div className="craeteupdatebill modal">
-      <h2>Update Bill</h2>
+    <aside className="modal-container">
+      <div className="craeteupdatebill modal">
+        <h2>Update Bill</h2>
 
         <div>
           <input
@@ -48,25 +46,26 @@ console.log(bill)
             name="description"
             value={NewBill.description}
             onChange={(e) => onChangeHandler(e)}
-            />
+          />
           <p>Description</p>
         </div>
         <div>
-
-        <input type="date"  name="date"
+          <input
+            type="date"
+            name="date"
             value={NewBill.date}
-            onChange={(e) => onChangeHandler(e)}/>
+            onChange={(e) => onChangeHandler(e)}
+          />
           <p>Date</p>
         </div>
 
-
         <div>
           <input
-            type="text"
+            type="number"
             name="amount"
             value={NewBill.amount}
             onChange={(e) => onChangeHandler(e)}
-            />
+          />
           <p>amount</p>
         </div>
         <div>
@@ -75,7 +74,7 @@ console.log(bill)
             name="category"
             value={NewBill.category}
             onChange={(e) => onChangeHandler(e)}
-            >
+          >
             <option value="" disabled>
               Select Category
             </option>
@@ -93,7 +92,7 @@ console.log(bill)
           onClick={() => {
             updateHandler()
           }}
-          >
+        >
           Update
         </div>
 
@@ -102,13 +101,11 @@ console.log(bill)
           onClick={() => {
             dispatch(closeModal())
           }}
-          >
+        >
           Cancel
         </div>
-
-    </div>
-
-      </aside>
+      </div>
+    </aside>
   )
 }
 
