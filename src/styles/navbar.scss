@@ -21,14 +21,15 @@ nav {
     color: #fff;
     text-decoration: none;
     letter-spacing: 2px;
-    &:hover {
-      color: #979797;
-    }
+
   }
   .Nav-logo {
-    padding: 20px 10px 0px 20px;
+    padding: 20px 10px;
     font-weight: bold;
     font-size: large;
+    &:hover {
+      color: black;
+    }
   }
 
   .menu-item {
