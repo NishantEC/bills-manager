@@ -60,7 +60,7 @@ const LineChart = () => {
   return (
     <div className="chart">
       <h3>monthly billing cycle chart</h3>
-      <Line data={chartData} options={options} className="linechart" redraw/>
+      <Line data={chartData} options={options} className="linechart" redraw={true}/>
     </div>
   )
 }
