@@ -1,6 +1,6 @@
-#Billing App
+# Billing App
 
-##built with-
+## built with-
 - React
 - Recat-ROuter V6.4
 - Sass
