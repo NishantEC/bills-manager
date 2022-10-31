@@ -9,7 +9,7 @@ const LineChart = () => {
 
   const [Dataset, setDataset] = useState({
     January: 0,
-    February: 0,
+    February: 10,
     March: 0,
     April: 0,
     May: 0,
@@ -60,7 +60,7 @@ const LineChart = () => {
   return (
     <div className="chart">
       <h3>monthly billing cycle chart</h3>
-      <Line data={chartData} options={options} className="linechart" />
+      <Line data={chartData} options={options} className="linechart" redraw/>
     </div>
   )
 }
