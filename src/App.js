@@ -18,7 +18,7 @@ function App() {
     dispatch(updateChartData(bills))
     
 
-  }, [bills])
+  }, [bills, dispatch])
   return (
     <div className="App">
       <Navbar />
