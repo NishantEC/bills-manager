@@ -30,7 +30,7 @@ const LineChart = () => {
     const newAmount = Dataset[month] + parseFloat(bill.amount)
     const prevDataset = Dataset
     prevDataset[month] = newAmount
-
+    console.log(Dataset);
     setDataset(prevDataset)
   }
 
