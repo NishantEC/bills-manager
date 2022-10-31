@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { createBill } from '../reducers/billSlice'
+import { updateChartData } from '../reducers/chartDataSlice'
 
 const CreateBill = () => {
   const dispatch = useDispatch()
@@ -12,6 +13,8 @@ const CreateBill = () => {
     category: '',
   })
 
+
+
   function onChangeHandler(e) {
     let { name, value } = e.target
     setNewBill({ ...NewBill, [name]: value })
@@ -20,11 +23,12 @@ const CreateBill = () => {
     if (
       (NewBill.description !== '') &
       (NewBill.amount !== '') &
-      (NewBill.date !== 0) &
-      (NewBill.amount !== '') &
+      (NewBill.date !== '') &
+      (NewBill.amount !== 0) &
       (NewBill.category !== '')
     ) {
-      dispatch(createBill(NewBill))
+        dispatch(createBill(NewBill))
+      dispatch(updateChartData(NewBill))
       clearForm()
     }
   }
