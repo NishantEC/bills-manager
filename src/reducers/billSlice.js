@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const billsFetched = localStorage.getItem('bills') !== null? JSON.parse(localStorage.getItem('bills')):[]
+const lastBillIdFetched = localStorage.getItem('lastBillId') !== null? JSON.parse(localStorage.getItem('lastBillId')):[]
 
 const initialState = {
-  bills: [
-  ],
-  lastBillId: 0,
+  bills: billsFetched,
+  lastBillId: lastBillIdFetched,
 }
 
 const billSlice = createSlice({
@@ -14,10 +15,15 @@ const billSlice = createSlice({
     createBill: (state, { payload }) => {
 
       state.lastBillId += 1
-      state.bills.push({id:state.lastBillId, ...payload})
+      state.bills.push({id:state.lastBillId, ...payload});
+      localStorage.setItem('bills',JSON.stringify(state.bills))
+      localStorage.setItem('lastBillId',JSON.stringify(state.lastBillId))
     },
     deleteBill: (state, { payload }) => {
       state.bills = state.bills.filter((bill) => bill.id !== payload)
+      localStorage.setItem('bills',JSON.stringify(state.bills))
+      localStorage.setItem('lastBillId',JSON.stringify(state.lastBillId))
+
     },
     updateBill:(state, { payload })=>{
 
@@ -27,6 +33,8 @@ const billSlice = createSlice({
         }
         return bill
       })
+      localStorage.setItem('bills',JSON.stringify(state.bills))
+      localStorage.setItem('lastBillId',JSON.stringify(state.lastBillId))
     },
   },
 })

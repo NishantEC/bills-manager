@@ -1,11 +1,15 @@
 import React from "react";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import {  useSelector } from "react-redux";
 import BillCard from "./BillCard";
 import UpdateBill from "./UpdateBill";
 
+
+
 const BillsContainer = () => {
   const bills = useSelector((store) => store.bills.bills);
+
+  
   const [filteredCategory, setFilteredCategory] = useState("all");
   const {isOpen} = useSelector((state) => state.modal);
   const n = bills.length

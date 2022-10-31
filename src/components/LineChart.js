@@ -6,7 +6,7 @@ Chart.register(...registerables)
 
 const LineChart = () => {
   // const billsData = useSelector((store) => store.bills.bills)
-  const ChartData = useSelector((store) => store.chartData)
+  const ChartData = useSelector((store) => store.chartData.chartData)
   
   // const [Dataset, setDataset] = useState({
     //   January: 0,

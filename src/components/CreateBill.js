@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { createBill } from '../reducers/billSlice'
-import { updateChartData } from '../reducers/chartDataSlice'
+
 
 const CreateBill = () => {
   const dispatch = useDispatch()
@@ -28,7 +28,6 @@ const CreateBill = () => {
       (NewBill.category !== '')
     ) {
         dispatch(createBill(NewBill))
-      dispatch(updateChartData(NewBill))
       clearForm()
     }
   }
